@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "com.pethoalpar.androidtesstwoocr"
-        minSdkVersion 23
+        minSdkVersion 19//Estaba en 23 yo le cambie para que funcione en nuestros dispositivos
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"

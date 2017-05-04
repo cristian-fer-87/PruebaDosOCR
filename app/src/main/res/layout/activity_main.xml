@@ -11,19 +11,67 @@
     tools:context="com.pethoalpar.androidtesstwoocr.MainActivity">
 
     <Button
-        android:text="Button"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:text="Escanear" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/textView"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginBottom="251dp"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnAnalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:text="Analizar"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/txtResultadoAnalizador"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/txtEditable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtResultadoAnalizador"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:text="Texto a analizar" />
+
+    <ToggleButton
+        android:id="@+id/toggleUSarTextoEditado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtEditable"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="13dp"
+        android:text="Usar Texto Editado" />
+
 </RelativeLayout>

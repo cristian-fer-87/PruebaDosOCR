@@ -226,7 +226,18 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
         Reader reader = new BufferedReader(new FileReader(fichero.getAbsolutePath()));
-        Lexer lexer = new Lexer(reader);
+        try {
+            Yylex lexer = new Yylex(new FileReader("fichero.txt"));
+            parser p = new parser(lexer);
+            p.parse();
+
+        } catch (IOException ex) {
+            System.out.println("Error: No se puede acceder al archivo" );
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage() );
+        }
+        /*Lexer lexer = new Lexer(reader);
+
         String resultado="";
         while (true){
             Token token =lexer.yylex();
@@ -271,6 +282,6 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     resultado=resultado+ "<"+ lexer.lexeme + "> ";
             }
-        }
+        }*/
     }
 }
